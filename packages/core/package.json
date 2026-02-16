@@ -1,6 +1,10 @@
 {
   "name": "@browserbasehq/stagehand",
-  "version": "3.0.8",
+  "version": "0.1.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "description": "An AI web browsing framework focused on simplicity and extensibility.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -104,11 +108,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/browserbase/stagehand.git",
+    "url": "git+https://github.com/coral-535/stagehand.git",
     "directory": "packages/core"
   },
   "bugs": {
-    "url": "https://github.com/browserbase/stagehand/issues"
+    "url": "https://github.com/coral-535/stagehand/issues"
   },
   "homepage": "https://stagehand.dev"
 }
