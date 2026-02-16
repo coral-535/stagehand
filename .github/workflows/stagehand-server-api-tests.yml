@@ -1,24 +1,7 @@
 name: Stagehand Server Tests
 
 on:
-  pull_request:
-    paths:
-      - "packages/server/**"
-      - "packages/core/**"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - ".github/workflows/stagehand-server-api-tests.yml"
-      - ".github/workflows/stagehand-server-sea-build.yml"
-  push:
-    branches:
-      - main
-    paths:
-      - "packages/server/**"
-      - "packages/core/**"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - ".github/workflows/stagehand-server-api-tests.yml"
-      - ".github/workflows/stagehand-server-sea-build.yml"
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}

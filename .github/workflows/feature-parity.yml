@@ -1,14 +1,7 @@
 name: Feature Parity
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-      - unlabeled
-    paths-ignore:
-      - "packages/docs/**"
+  workflow_dispatch:
 
 jobs:
   check-parity-label:

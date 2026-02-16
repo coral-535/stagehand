@@ -1,35 +1,7 @@
 name: Stagehand Server SEA Build
 
 on:
-  workflow_call:
-    inputs:
-      matrix:
-        description: "JSON matrix include list for SEA binaries."
-        required: false
-        type: string
-        default: |
-          [
-            {"os":"ubuntu-latest","platform":"linux","arch":"x64","binary_name":"stagehand-server-linux-x64"},
-            {"os":"ubuntu-latest","platform":"linux","arch":"arm64","binary_name":"stagehand-server-linux-arm64"},
-            {"os":"macos-15","platform":"darwin","arch":"arm64","binary_name":"stagehand-server-darwin-arm64"},
-            {"os":"macos-15-intel","platform":"darwin","arch":"x64","binary_name":"stagehand-server-darwin-x64"},
-            {"os":"windows-latest","platform":"win32","arch":"x64","binary_name":"stagehand-server-win32-x64.exe"},
-            {"os":"windows-latest","platform":"win32","arch":"arm64","binary_name":"stagehand-server-win32-arm64.exe"}
-          ]
   workflow_dispatch:
-    inputs:
-      matrix:
-        description: "JSON matrix include list for SEA binaries."
-        required: false
-        default: |
-          [
-            {"os":"ubuntu-latest","platform":"linux","arch":"x64","binary_name":"stagehand-server-linux-x64"},
-            {"os":"ubuntu-latest","platform":"linux","arch":"arm64","binary_name":"stagehand-server-linux-arm64"},
-            {"os":"macos-15","platform":"darwin","arch":"arm64","binary_name":"stagehand-server-darwin-arm64"},
-            {"os":"macos-15-intel","platform":"darwin","arch":"x64","binary_name":"stagehand-server-darwin-x64"},
-            {"os":"windows-latest","platform":"win32","arch":"x64","binary_name":"stagehand-server-win32-x64.exe"},
-            {"os":"windows-latest","platform":"win32","arch":"arm64","binary_name":"stagehand-server-win32-arm64.exe"}
-          ]
 
 jobs:
   build_binaries:
